@@ -5,7 +5,9 @@ apis:
   - aid: finra:finra
     name: FINRA
     tags:
-      - API
+      - Finanical
+      - Regulations
+      - Compliance
     humanURL: https://developer.finra.org/
     properties:
       - url: https://developer.finra.org/
@@ -24,7 +26,9 @@ apis:
       transparency, fairness, and accountability in the securities industry.
 name: FINRA
 tags:
-  - API
+  - Finanical
+  - Regulations
+  - Compliance
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
