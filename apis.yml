@@ -11,9 +11,9 @@ created: '2025-03-01'
 modified: '2026-03-16'
 position: Consumer
 tags:
+  - Compliance
   - Financial
   - Regulations
-  - Compliance
 url: >-
   https://raw.githubusercontent.com/api-evangelist/finra/refs/heads/main/apis.yml
 specificationVersion: '0.19'
@@ -21,9 +21,9 @@ apis:
   - aid: finra:finra
     name: FINRA
     tags:
+      - Compliance
       - Financial
       - Regulations
-      - Compliance
     humanURL: https://developer.finra.org/
     properties:
       - url: https://developer.finra.org/
