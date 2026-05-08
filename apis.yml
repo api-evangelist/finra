@@ -40,6 +40,8 @@ apis:
         url: https://developer.finra.org/docs#query_api
       - type: Developer Portal
         url: https://developer.finra.org/
+      - url: openapi/finra-openapi.yml
+        type: OpenAPI
   - aid: finra:notification-api
     name: FINRA Notification API
     description: >-
