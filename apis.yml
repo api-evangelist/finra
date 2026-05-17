@@ -82,7 +82,7 @@ common:
     url: https://developer.finra.org/
   - type: Documentation
     url: https://developer.finra.org/docs
-  - type: Getting Started
+  - type: GettingStarted
     url: https://developer.finra.org/docs#getting_started
   - type: Console
     url: https://gateway.finra.org/app/dfo-console
