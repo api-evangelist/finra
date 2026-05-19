@@ -1,0 +1,191 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: FINRA Query API — Datasets
+  description: 'FINRA Query API — Datasets. 4 operations. Lead operation: Query a dataset. Self-contained Naftiko capability
+    covering one Finra business surface.'
+  tags:
+  - Finra
+  - Datasets
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    FINRA_API_KEY: FINRA_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: finra-datasets
+    baseUri: https://api.finra.org
+    description: FINRA Query API — Datasets business capability. Self-contained, no shared references.
+    resources:
+    - name: data-group-group-name-dataset
+      path: /data/group/{group}/name/{dataset}
+      operations:
+      - name: querydataset
+        method: GET
+        description: Query a dataset
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: limit
+          in: query
+          type: integer
+        - name: offset
+          in: query
+          type: integer
+      - name: querydatasetadvanced
+        method: POST
+        description: Query a dataset with advanced filtering
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: data-group-group-name-dataset-id-id
+      path: /data/group/{group}/name/{dataset}/id/{id}
+      operations:
+      - name: getdatasetrecord
+        method: GET
+        description: Retrieve a single record by ID
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: id
+          in: path
+          type: string
+          required: true
+    - name: datasets
+      path: /datasets
+      operations:
+      - name: listdatasets
+        method: GET
+        description: List available datasets
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.FINRA_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: finra-datasets-rest
+    port: 8080
+    description: REST adapter for FINRA Query API — Datasets. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/data/group/{group}/name/{dataset}
+      name: data-group-group-name-dataset
+      description: REST surface for data-group-group-name-dataset.
+      operations:
+      - method: GET
+        name: querydataset
+        description: Query a dataset
+        call: finra-datasets.querydataset
+        with:
+          limit: rest.limit
+          offset: rest.offset
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: querydatasetadvanced
+        description: Query a dataset with advanced filtering
+        call: finra-datasets.querydatasetadvanced
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/data/group/{group}/name/{dataset}/id/{id}
+      name: data-group-group-name-dataset-id-id
+      description: REST surface for data-group-group-name-dataset-id-id.
+      operations:
+      - method: GET
+        name: getdatasetrecord
+        description: Retrieve a single record by ID
+        call: finra-datasets.getdatasetrecord
+        with:
+          id: rest.id
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/datasets
+      name: datasets
+      description: REST surface for datasets.
+      operations:
+      - method: GET
+        name: listdatasets
+        description: List available datasets
+        call: finra-datasets.listdatasets
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: finra-datasets-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for FINRA Query API — Datasets. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: query-dataset
+      description: Query a dataset
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: finra-datasets.querydataset
+      with:
+        limit: tools.limit
+        offset: tools.offset
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: query-dataset-advanced-filtering
+      description: Query a dataset with advanced filtering
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: finra-datasets.querydatasetadvanced
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: retrieve-single-record-id
+      description: Retrieve a single record by ID
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: finra-datasets.getdatasetrecord
+      with:
+        id: tools.id
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-available-datasets
+      description: List available datasets
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: finra-datasets.listdatasets
+      outputParameters:
+      - type: object
+        mapping: $.

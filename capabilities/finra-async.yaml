@@ -1,0 +1,79 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: FINRA Query API — Async
+  description: 'FINRA Query API — Async. 1 operations. Lead operation: Poll async request status. Self-contained Naftiko capability
+    covering one Finra business surface.'
+  tags:
+  - Finra
+  - Async
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    FINRA_API_KEY: FINRA_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: finra-async
+    baseUri: https://api.finra.org
+    description: FINRA Query API — Async business capability. Self-contained, no shared references.
+    resources:
+    - name: async-requests-group-group-name-dataset-requestId
+      path: /async-requests/group/{group}/name/{dataset}/{requestId}
+      operations:
+      - name: getasyncrequest
+        method: GET
+        description: Poll async request status
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: requestId
+          in: path
+          type: string
+          required: true
+    authentication:
+      type: bearer
+      token: '{{env.FINRA_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: finra-async-rest
+    port: 8080
+    description: REST adapter for FINRA Query API — Async. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/async-requests/group/{group}/name/{dataset}/{requestid}
+      name: async-requests-group-group-name-dataset-requestid
+      description: REST surface for async-requests-group-group-name-dataset-requestId.
+      operations:
+      - method: GET
+        name: getasyncrequest
+        description: Poll async request status
+        call: finra-async.getasyncrequest
+        with:
+          requestId: rest.requestId
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: finra-async-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for FINRA Query API — Async. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: poll-async-request-status
+      description: Poll async request status
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: finra-async.getasyncrequest
+      with:
+        requestId: tools.requestId
+      outputParameters:
+      - type: object
+        mapping: $.
