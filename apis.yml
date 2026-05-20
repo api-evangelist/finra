@@ -10,95 +10,97 @@ created: '2025-03-01'
 modified: '2026-05-19'
 position: Consumer
 tags:
-- Compliance
-- Financial
-- Regulations
-- Securities
-- Market Data
+  - Compliance
+  - Financial
+  - Regulations
+  - Securities
+  - Market Data
 url: https://raw.githubusercontent.com/api-evangelist/finra/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
-- aid: finra:query-api
-  name: FINRA Query API
-  description: The Query API provides programmatic access to FINRA datasets, including market data, regulatory data, and reference
-    data via a standard query interface.
-  humanURL: https://developer.finra.org/docs#query_api
-  tags:
-  - Compliance
-  - Financial
-  - Market Data
-  - Query
-  - Regulations
-  properties:
-  - type: Documentation
-    url: https://developer.finra.org/docs#query_api
-  - type: Developer Portal
-    url: https://developer.finra.org/
-  - url: openapi/finra-openapi.yml
-    type: OpenAPI
-  - type: NaftikoCapability
-    url: capabilities/finra-async.yaml
-  - type: NaftikoCapability
-    url: capabilities/finra-datasets.yaml
-  - type: NaftikoCapability
-    url: capabilities/finra-metadata.yaml
-  - type: NaftikoCapability
-    url: capabilities/finra-partitions.yaml
-- aid: finra:notification-api
-  name: FINRA Notification API
-  description: The Notification API allows third-party systems to detect changes related to FINRA datasets and resources via
-    polling, enabling event-driven integrations with FINRA reference and market data.
-  humanURL: https://developer.finra.org/docs#notification_api
-  tags:
-  - Compliance
-  - Notifications
-  - Polling
-  - Regulations
-  properties:
-  - type: Documentation
-    url: https://developer.finra.org/docs#notification_api
-  - type: Developer Portal
-    url: https://developer.finra.org/
-- aid: finra:submission-api
-  name: FINRA Submission API
-  description: The Submission API allows third-party systems to submit filings and other regulatory data to FINRA via a standard
-    submission interface.
-  humanURL: https://developer.finra.org/docs#submission_api
-  tags:
-  - Compliance
-  - Filings
-  - Regulations
-  - Submissions
-  properties:
-  - type: Documentation
-    url: https://developer.finra.org/docs#submission_api
-  - type: Developer Portal
-    url: https://developer.finra.org/
+  - aid: finra:query-api
+    name: FINRA Query API
+    description: The Query API provides programmatic access to FINRA datasets, including market data, regulatory data, and reference
+      data via a standard query interface.
+    humanURL: https://developer.finra.org/docs#query_api
+    tags:
+    - Compliance
+    - Financial
+    - Market Data
+    - Query
+    - Regulations
+    properties:
+    - type: Documentation
+      url: https://developer.finra.org/docs#query_api
+    - type: Developer Portal
+      url: https://developer.finra.org/
+    - url: openapi/finra-openapi.yml
+      type: OpenAPI
+    - type: NaftikoCapability
+      url: capabilities/finra-async.yaml
+    - type: NaftikoCapability
+      url: capabilities/finra-datasets.yaml
+    - type: NaftikoCapability
+      url: capabilities/finra-metadata.yaml
+    - type: NaftikoCapability
+      url: capabilities/finra-partitions.yaml
+  - aid: finra:notification-api
+    name: FINRA Notification API
+    description: The Notification API allows third-party systems to detect changes related to FINRA datasets and resources via
+      polling, enabling event-driven integrations with FINRA reference and market data.
+    humanURL: https://developer.finra.org/docs#notification_api
+    tags:
+    - Compliance
+    - Notifications
+    - Polling
+    - Regulations
+    properties:
+    - type: Documentation
+      url: https://developer.finra.org/docs#notification_api
+    - type: Developer Portal
+      url: https://developer.finra.org/
+  - aid: finra:submission-api
+    name: FINRA Submission API
+    description: The Submission API allows third-party systems to submit filings and other regulatory data to FINRA via a standard
+      submission interface.
+    humanURL: https://developer.finra.org/docs#submission_api
+    tags:
+    - Compliance
+    - Filings
+    - Regulations
+    - Submissions
+    properties:
+    - type: Documentation
+      url: https://developer.finra.org/docs#submission_api
+    - type: Developer Portal
+      url: https://developer.finra.org/
 common:
-- type: LinkedIn
-  url: https://www.linkedin.com/company/finra
-- type: Website
-  url: https://www.finra.org/
-- type: Developer Portal
-  url: https://developer.finra.org/
-- type: Documentation
-  url: https://developer.finra.org/docs
-- type: GettingStarted
-  url: https://developer.finra.org/docs#getting_started
-- type: Console
-  url: https://gateway.finra.org/app/dfo-console
-- type: Catalog
-  url: https://developer.finra.org/catalog
-- type: Support
-  url: https://developer.finra.org/support
-- type: TermsOfService
-  url: https://developer.finra.org/finra-api-terms-service
-- type: PrivacyPolicy
-  url: https://www.finra.org/privacy-policy
-- type: News
-  url: https://developer.finra.org/news-and-updates
-- type: Webinars
-  url: https://developer.finra.org/webinars
+  - type: GitHubOrganization
+    url: https://github.com/FINRAOS
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/finra
+  - type: Website
+    url: https://www.finra.org/
+  - type: Developer Portal
+    url: https://developer.finra.org/
+  - type: Documentation
+    url: https://developer.finra.org/docs
+  - type: GettingStarted
+    url: https://developer.finra.org/docs#getting_started
+  - type: Console
+    url: https://gateway.finra.org/app/dfo-console
+  - type: Catalog
+    url: https://developer.finra.org/catalog
+  - type: Support
+    url: https://developer.finra.org/support
+  - type: TermsOfService
+    url: https://developer.finra.org/finra-api-terms-service
+  - type: PrivacyPolicy
+    url: https://www.finra.org/privacy-policy
+  - type: News
+    url: https://developer.finra.org/news-and-updates
+  - type: Webinars
+    url: https://developer.finra.org/webinars
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com
