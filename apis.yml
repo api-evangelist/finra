@@ -1,7 +1,8 @@
 aid: finra
 name: FINRA
-description: The Financial Industry Regulatory Authority (FINRA) is a regulatory organization that oversees and regulates
-  the securities industry in the United States. The FINRA Developer Center exposes Query, Notification, and Submission APIs
+description: >-
+  The Financial Industry Regulatory Authority (FINRA) is a regulatory organization that oversees and regulates the
+  securities industry in the United States. The FINRA Developer Center exposes Query, Notification, and Submission APIs
   for accessing market and regulatory datasets, detecting changes via polling, and submitting filings to FINRA.
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
@@ -20,60 +21,55 @@ specificationVersion: '0.19'
 apis:
   - aid: finra:query-api
     name: FINRA Query API
-    description: The Query API provides programmatic access to FINRA datasets, including market data, regulatory data, and reference
-      data via a standard query interface.
+    description: >-
+      The Query API provides programmatic access to FINRA datasets, including market data, regulatory data, and
+      reference data via a standard query interface.
     humanURL: https://developer.finra.org/docs#query_api
     tags:
-    - Compliance
-    - Financial
-    - Market Data
-    - Query
-    - Regulations
+      - Compliance
+      - Financial
+      - Market Data
+      - Query
+      - Regulations
     properties:
-    - type: Documentation
-      url: https://developer.finra.org/docs#query_api
-    - type: Developer Portal
-      url: https://developer.finra.org/
-    - url: openapi/finra-openapi.yml
-      type: OpenAPI
-    - type: NaftikoCapability
-      url: capabilities/finra-async.yaml
-    - type: NaftikoCapability
-      url: capabilities/finra-datasets.yaml
-    - type: NaftikoCapability
-      url: capabilities/finra-metadata.yaml
-    - type: NaftikoCapability
-      url: capabilities/finra-partitions.yaml
+      - type: Documentation
+        url: https://developer.finra.org/docs#query_api
+      - type: Developer Portal
+        url: https://developer.finra.org/
+      - url: openapi/finra-openapi.yml
+        type: OpenAPI
   - aid: finra:notification-api
     name: FINRA Notification API
-    description: The Notification API allows third-party systems to detect changes related to FINRA datasets and resources via
+    description: >-
+      The Notification API allows third-party systems to detect changes related to FINRA datasets and resources via
       polling, enabling event-driven integrations with FINRA reference and market data.
     humanURL: https://developer.finra.org/docs#notification_api
     tags:
-    - Compliance
-    - Notifications
-    - Polling
-    - Regulations
+      - Compliance
+      - Notifications
+      - Polling
+      - Regulations
     properties:
-    - type: Documentation
-      url: https://developer.finra.org/docs#notification_api
-    - type: Developer Portal
-      url: https://developer.finra.org/
+      - type: Documentation
+        url: https://developer.finra.org/docs#notification_api
+      - type: Developer Portal
+        url: https://developer.finra.org/
   - aid: finra:submission-api
     name: FINRA Submission API
-    description: The Submission API allows third-party systems to submit filings and other regulatory data to FINRA via a standard
+    description: >-
+      The Submission API allows third-party systems to submit filings and other regulatory data to FINRA via a standard
       submission interface.
     humanURL: https://developer.finra.org/docs#submission_api
     tags:
-    - Compliance
-    - Filings
-    - Regulations
-    - Submissions
+      - Compliance
+      - Filings
+      - Regulations
+      - Submissions
     properties:
-    - type: Documentation
-      url: https://developer.finra.org/docs#submission_api
-    - type: Developer Portal
-      url: https://developer.finra.org/
+      - type: Documentation
+        url: https://developer.finra.org/docs#submission_api
+      - type: Developer Portal
+        url: https://developer.finra.org/
 common:
   - type: GitHubOrganization
     url: https://github.com/FINRAOS
