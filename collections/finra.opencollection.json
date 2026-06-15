@@ -1,0 +1,221 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "FINRA Query API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Datasets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List available datasets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.finra.org/datasets"
+          },
+          "docs": "List available datasets"
+        },
+        {
+          "info": {
+            "name": "Query a dataset",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.finra.org/data/group/:group/name/:dataset",
+            "params": [
+              {
+                "name": "group",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "dataset",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Query a dataset"
+        },
+        {
+          "info": {
+            "name": "Query a dataset with advanced filtering",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.finra.org/data/group/:group/name/:dataset",
+            "params": [
+              {
+                "name": "group",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "dataset",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Query a dataset with advanced filtering"
+        },
+        {
+          "info": {
+            "name": "Retrieve a single record by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.finra.org/data/group/:group/name/:dataset/id/:id",
+            "params": [
+              {
+                "name": "group",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "dataset",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a single record by ID"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Metadata",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve dataset field definitions and metadata",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.finra.org/metadata/group/:group/name/:dataset",
+            "params": [
+              {
+                "name": "group",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "dataset",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve dataset field definitions and metadata"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Partitions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get available partition values for a dataset",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.finra.org/partitions/group/:group/name/:dataset",
+            "params": [
+              {
+                "name": "group",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "dataset",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get available partition values for a dataset"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Async",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Poll async request status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.finra.org/async-requests/group/:group/name/:dataset/:requestId",
+            "params": [
+              {
+                "name": "group",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "dataset",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "requestId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Poll async request status"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
