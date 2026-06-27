@@ -34,7 +34,7 @@ apis:
     properties:
       - type: Documentation
         url: https://developer.finra.org/docs#query_api
-      - type: Developer Portal
+      - type: DeveloperPortal
         url: https://developer.finra.org/
       - url: openapi/finra-openapi.yml
         type: OpenAPI
@@ -52,7 +52,7 @@ apis:
     properties:
       - type: Documentation
         url: https://developer.finra.org/docs#notification_api
-      - type: Developer Portal
+      - type: DeveloperPortal
         url: https://developer.finra.org/
   - aid: finra:submission-api
     name: FINRA Submission API
@@ -68,7 +68,7 @@ apis:
     properties:
       - type: Documentation
         url: https://developer.finra.org/docs#submission_api
-      - type: Developer Portal
+      - type: DeveloperPortal
         url: https://developer.finra.org/
 common:
   - type: GitHubOrganization
@@ -77,7 +77,7 @@ common:
     url: https://www.linkedin.com/company/finra
   - type: Website
     url: https://www.finra.org/
-  - type: Developer Portal
+  - type: DeveloperPortal
     url: https://developer.finra.org/
   - type: Documentation
     url: https://developer.finra.org/docs
