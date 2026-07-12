@@ -71,6 +71,10 @@ apis:
       - type: DeveloperPortal
         url: https://developer.finra.org/
 common:
+  - type: DomainSecurity
+    url: security/finra-domain-security.yml
+  - type: Authentication
+    url: authentication/finra-authentication.yml
   - type: GitHubOrganization
     url: https://github.com/FINRAOS
   - type: LinkedIn
@@ -94,6 +98,8 @@ common:
   - type: PrivacyPolicy
     url: https://www.finra.org/privacy-policy
   - type: News
+    url: https://developer.finra.org/news-and-updates
+  - type: Blog
     url: https://developer.finra.org/news-and-updates
   - type: Webinars
     url: https://developer.finra.org/webinars
