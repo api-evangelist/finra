@@ -71,6 +71,8 @@ apis:
       - type: DeveloperPortal
         url: https://developer.finra.org/
 common:
+  - type: AgenticAccess
+    url: agentic-access/finra-agentic-access.yml
   - type: DomainSecurity
     url: security/finra-domain-security.yml
   - type: Authentication
