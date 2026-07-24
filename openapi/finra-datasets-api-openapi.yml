@@ -1,0 +1,121 @@
+openapi: 3.1.0
+info:
+  title: FINRA Query Async Datasets API
+  version: 1.0.0
+  description: Minimal OpenAPI description of the FINRA Developer Platform Query API, which provides programmatic access to FINRA datasets including market, regulatory, and reference data.
+  x-generated-from: https://developer.finra.org/docs#query_api
+  x-generated-by: claude-crawl-2026-05-08
+servers:
+- url: https://api.finra.org
+  description: Production
+- url: https://api-int.qa.finra.org
+  description: QA
+security:
+- bearerAuth: []
+tags:
+- name: Datasets
+paths:
+  /datasets:
+    get:
+      tags:
+      - Datasets
+      summary: List available datasets
+      operationId: listDatasets
+      responses:
+        '200':
+          description: A list of datasets
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+  /data/group/{group}/name/{dataset}:
+    get:
+      tags:
+      - Datasets
+      summary: Query a dataset
+      operationId: queryDataset
+      parameters:
+      - $ref: '#/components/parameters/Group'
+      - $ref: '#/components/parameters/Dataset'
+      - in: query
+        name: limit
+        schema:
+          type: integer
+      - in: query
+        name: offset
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Query results
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+    post:
+      tags:
+      - Datasets
+      summary: Query a dataset with advanced filtering
+      operationId: queryDatasetAdvanced
+      parameters:
+      - $ref: '#/components/parameters/Group'
+      - $ref: '#/components/parameters/Dataset'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Query results
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+  /data/group/{group}/name/{dataset}/id/{id}:
+    get:
+      tags:
+      - Datasets
+      summary: Retrieve a single record by ID
+      operationId: getDatasetRecord
+      parameters:
+      - $ref: '#/components/parameters/Group'
+      - $ref: '#/components/parameters/Dataset'
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: A dataset record
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  parameters:
+    Group:
+      in: path
+      name: group
+      required: true
+      schema:
+        type: string
+    Dataset:
+      in: path
+      name: dataset
+      required: true
+      schema:
+        type: string
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

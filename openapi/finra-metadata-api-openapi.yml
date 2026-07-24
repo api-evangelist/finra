@@ -1,0 +1,52 @@
+openapi: 3.1.0
+info:
+  title: FINRA Query Async Metadata API
+  version: 1.0.0
+  description: Minimal OpenAPI description of the FINRA Developer Platform Query API, which provides programmatic access to FINRA datasets including market, regulatory, and reference data.
+  x-generated-from: https://developer.finra.org/docs#query_api
+  x-generated-by: claude-crawl-2026-05-08
+servers:
+- url: https://api.finra.org
+  description: Production
+- url: https://api-int.qa.finra.org
+  description: QA
+security:
+- bearerAuth: []
+tags:
+- name: Metadata
+paths:
+  /metadata/group/{group}/name/{dataset}:
+    get:
+      tags:
+      - Metadata
+      summary: Retrieve dataset field definitions and metadata
+      operationId: getDatasetMetadata
+      parameters:
+      - $ref: '#/components/parameters/Group'
+      - $ref: '#/components/parameters/Dataset'
+      responses:
+        '200':
+          description: Dataset metadata
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  parameters:
+    Group:
+      in: path
+      name: group
+      required: true
+      schema:
+        type: string
+    Dataset:
+      in: path
+      name: dataset
+      required: true
+      schema:
+        type: string
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
