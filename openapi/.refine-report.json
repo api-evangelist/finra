@@ -1,0 +1,20 @@
+{
+  "provider": "finra",
+  "sources": [
+    "finra-async-api-openapi.yml",
+    "finra-datasets-api-openapi.yml",
+    "finra-metadata-api-openapi.yml",
+    "finra-partitions-api-openapi.yml"
+  ],
+  "outputs": [
+    "finra-async-api-openapi.yml",
+    "finra-datasets-api-openapi.yml",
+    "finra-metadata-api-openapi.yml",
+    "finra-partitions-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
