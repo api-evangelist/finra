@@ -1,0 +1,47 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "FINRA Query Async Partitions API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Partitions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get available partition values for a dataset",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.finra.org/partitions/group/:group/name/:dataset",
+            "params": [
+              {
+                "name": "group",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "dataset",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get available partition values for a dataset"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

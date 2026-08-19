@@ -1,0 +1,52 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "FINRA Query Async API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Async",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Poll async request status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.finra.org/async-requests/group/:group/name/:dataset/:requestId",
+            "params": [
+              {
+                "name": "group",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "dataset",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "requestId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Poll async request status"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

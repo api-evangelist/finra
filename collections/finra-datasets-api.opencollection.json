@@ -1,0 +1,123 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "FINRA Query Async Datasets API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Datasets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List available datasets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.finra.org/datasets"
+          },
+          "docs": "List available datasets"
+        },
+        {
+          "info": {
+            "name": "Query a dataset",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.finra.org/data/group/:group/name/:dataset",
+            "params": [
+              {
+                "name": "group",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "dataset",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Query a dataset"
+        },
+        {
+          "info": {
+            "name": "Query a dataset with advanced filtering",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.finra.org/data/group/:group/name/:dataset",
+            "params": [
+              {
+                "name": "group",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "dataset",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Query a dataset with advanced filtering"
+        },
+        {
+          "info": {
+            "name": "Retrieve a single record by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.finra.org/data/group/:group/name/:dataset/id/:id",
+            "params": [
+              {
+                "name": "group",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "dataset",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a single record by ID"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
