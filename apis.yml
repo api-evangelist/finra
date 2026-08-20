@@ -40,6 +40,11 @@ apis:
   humanURL: https://developer.finra.org/docs#notification_api
   tags:
   - Compliance
+  - Notification
+  - Polling
+  - Regulations
+  tags_raw:
+  - Compliance
   - Notifications
   - Polling
   - Regulations
