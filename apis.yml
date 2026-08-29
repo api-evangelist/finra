@@ -5,6 +5,18 @@ description: >-
   securities industry in the United States. The FINRA Developer Center exposes Query, Notification, and Submission APIs
   for accessing market and regulatory datasets, detecting changes via polling, and submitting filings to FINRA.
 type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
