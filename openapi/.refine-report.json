@@ -1,10 +1,7 @@
 {
   "provider": "finra",
   "sources": [
-    "finra-async-api-openapi.yml",
-    "finra-datasets-api-openapi.yml",
-    "finra-metadata-api-openapi.yml",
-    "finra-partitions-api-openapi.yml"
+    "_ae-authored/finra-openapi.yml"
   ],
   "outputs": [
     "finra-async-api-openapi.yml",
@@ -15,6 +12,15 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "finra-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "finra-async-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "finra-datasets-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "finra-metadata-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "finra-partitions-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
