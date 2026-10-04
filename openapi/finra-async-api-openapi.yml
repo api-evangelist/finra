@@ -38,15 +38,15 @@ paths:
                 type: object
 components:
   parameters:
-    Group:
-      in: path
-      name: group
-      required: true
-      schema:
-        type: string
     Dataset:
       in: path
       name: dataset
+      required: true
+      schema:
+        type: string
+    Group:
+      in: path
+      name: group
       required: true
       schema:
         type: string
