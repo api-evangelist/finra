@@ -1,0 +1,73 @@
+edges:
+- partner_name: ISO 10383 (MIC)
+  partner: null
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv
+  source: mic
+  category: registered trading venues and market segments
+  contract_reference:
+    register: ISO 10383 Market Identifier Codes (ISO 20022 registration authority)
+    spec_file: null
+    standard: ISO 10383
+    role: venue operator
+    matched_domain: finra.org
+    matched_by: domain+verified:finra.org
+    categories:
+    - NSPD
+    - TRFS
+    operating_mics:
+    - FINR
+    mics:
+    - mic: FINN
+      operating_mic: FINR
+      segment: SGMT
+      market: FINRA/NASDAQ TRF CARTERET (TRADE REPORTING FACILITY)
+      category: TRFS
+      legal_name: FINANCIAL INDUSTRY REGULATORY AUTHORITY, INC.
+      country: US
+    - mic: XADF
+      operating_mic: FINR
+      segment: SGMT
+      market: FINRA ALTERNATIVE DISPLAY FACILITY (ADF)
+      category: NSPD
+      legal_name: FINANCIAL INDUSTRY REGULATORY AUTHORITY, INC.
+      country: US
+    - mic: FINC
+      operating_mic: FINR
+      segment: SGMT
+      market: FINRA/NASDAQ TRF CHICAGO (TRADE REPORTING FACILITY)
+      category: TRFS
+      legal_name: FINANCIAL INDUSTRY REGULATORY AUTHORITY, INC.
+      country: US
+    - mic: FINO
+      operating_mic: FINR
+      segment: SGMT
+      market: FINRA ORF (TRADE REPORTING FACILITY)
+      category: TRFS
+      legal_name: FINANCIAL INDUSTRY REGULATORY AUTHORITY, INC.
+      country: US
+    - mic: FINR
+      operating_mic: FINR
+      segment: OPRT
+      market: FINRA
+      category: NSPD
+      legal_name: FINANCIAL INDUSTRY REGULATORY AUTHORITY, INC.
+      country: US
+    - mic: FINY
+      operating_mic: FINR
+      segment: SGMT
+      market: FINRA/NYSE TRF (TRADE REPORTING FACILITY)
+      category: TRFS
+      legal_name: FINANCIAL INDUSTRY REGULATORY AUTHORITY, INC.
+      country: US
+    detected_by: sweep-capital-markets.py
+    detected: '2026-10-15'
+  detected_by: sweep-capital-markets.py
+  first_seen: '2026-10-15'
+generated: '2026-10-15'
+method: searched
+checked:
+- https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv
