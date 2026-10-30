@@ -1,4 +1,4 @@
-# FINRA (finra)
+# FINRA
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,108 +66,128 @@
 
 The Financial Industry Regulatory Authority (FINRA) is a regulatory organization that oversees and regulates the securities industry in the United States. The FINRA Developer Center exposes Query, Notification, and Submission APIs for accessing market and regulatory datasets, detecting changes via polling, and submitting filings to FINRA.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/finra/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/finra/refs/heads/main/apis.yml)
+**Areas:** Compliance · Finance · Regulations · Securities · Market Data
 
-## Scope
+## FINRA on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for FINRA is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/finra/](https://apis.io/providers/finra/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (6)
 
-- Compliance
-- Financial
-- Regulations
-- Securities
-- Market Data
+- [FINRA Notification API](https://apis.io/apis/finra/notification-api/) — The Notification API allows third-party systems to detect changes related to FINRA datasets and resources via polling, enabling event-driven integrations…
+- [FINRA Submission API](https://apis.io/apis/finra/submission-api/) — The Submission API allows third-party systems to submit filings and other regulatory data to FINRA via a standard submission interface.
+- [FINRA Async API](https://apis.io/apis/finra/finra-async-api/) — The Async API from FINRA — 1 operation(s) for async.
+- [FINRA Datasets API](https://apis.io/apis/finra/finra-datasets-api/) — The Datasets API from FINRA — 3 operation(s) for datasets.
+- [FINRA Metadata API](https://apis.io/apis/finra/finra-metadata-api/) — The Metadata API from FINRA — 1 operation(s) for metadata.
+- [FINRA Partitions API](https://apis.io/apis/finra/finra-partitions-api/) — The Partitions API from FINRA — 1 operation(s) for partitions.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2025-03-01
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### FINRA Query API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The Query API provides programmatic access to FINRA datasets, including market data, regulatory data, and reference data via a standard query interface.
+- [Finra Agentic Access](https://apis.io/agentic-access/finra/finra-agentic-access/)
 
-- **Human URL:** [https://developer.finra.org/docs#query_api](https://developer.finra.org/docs#query_api)
+#### Collections (5)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Compliance
-- Financial
-- Market Data
-- Query
-- Regulations
+- [FINRA Query API](https://apis.io/collections/finra/open-finra/)
+- [FINRA Query Async API](https://apis.io/collections/finra/open-finra-async-api/)
+- [FINRA Query Async Datasets API](https://apis.io/collections/finra/open-finra-datasets-api/)
+- [FINRA Query Async Metadata API](https://apis.io/collections/finra/open-finra-metadata-api/)
+- [FINRA Query Async Partitions API](https://apis.io/collections/finra/open-finra-partitions-api/)
 
-#### Properties
+#### Security (2)
 
-- [Documentation](https://developer.finra.org/docs#query_api)
-- [Developer  Portal](https://developer.finra.org/)
-- [OpenAPI](openapi/finra-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/finra.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/finra.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-### FINRA Notification API
+- [Finra Authentication](https://apis.io/security/finra/finra-authentication/)
+- [Finra Domain Security](https://apis.io/security/finra/finra-domain-security/)
 
-The Notification API allows third-party systems to detect changes related to FINRA datasets and resources via polling, enabling event-driven integrations with FINRA reference and market data.
+#### Plans and pricing (1)
 
-- **Human URL:** [https://developer.finra.org/docs#notification_api](https://developer.finra.org/docs#notification_api)
+Published plans, tiers and prices.
 
-#### Tags
+- [Finra Plans Pricing](https://apis.io/plans/finra/finra-plans-pricing/)
 
-- Compliance
-- Notifications
-- Polling
-- Regulations
+#### Rate limits (1)
 
-#### Properties
+Published request limits.
 
-- [Documentation](https://developer.finra.org/docs#notification_api)
-- [Developer  Portal](https://developer.finra.org/)
-- [Postman Collection](collections/finra.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/finra.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Finra Rate Limits](https://apis.io/rate-limits/finra/finra-rate-limits/)
 
-### FINRA Submission API
+#### FinOps (1)
 
-The Submission API allows third-party systems to submit filings and other regulatory data to FINRA via a standard submission interface.
+What the API costs to run, by operation.
 
-- **Human URL:** [https://developer.finra.org/docs#submission_api](https://developer.finra.org/docs#submission_api)
+- [Finra Finops](https://apis.io/finops/finra/finra-finops/)
 
-#### Tags
+## Where to find this API
 
-- Compliance
-- Filings
-- Regulations
-- Submissions
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-#### Properties
-
-- [Documentation](https://developer.finra.org/docs#submission_api)
-- [Developer  Portal](https://developer.finra.org/)
-- [Postman Collection](collections/finra.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/finra.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [GitHub Organization](https://github.com/FINRAOS)
-- [LinkedIn](https://www.linkedin.com/company/finra)
 - [Website](https://www.finra.org/)
-- [Developer  Portal](https://developer.finra.org/)
 - [Documentation](https://developer.finra.org/docs)
-- [Getting Started](https://developer.finra.org/docs#getting_started)
-- [Console](https://gateway.finra.org/app/dfo-console)
-- [Catalog](https://developer.finra.org/catalog)
+- [Getting started](https://developer.finra.org/docs#getting_started)
 - [Support](https://developer.finra.org/support)
-- [Terms of Service](https://developer.finra.org/finra-api-terms-service)
-- [Privacy Policy](https://www.finra.org/privacy-policy)
-- [News](https://developer.finra.org/news-and-updates)
-- [Webinars](https://developer.finra.org/webinars)
+- [Blog](https://developer.finra.org/news-and-updates)
+- [Terms of service](https://developer.finra.org/finra-api-terms-service)
+- [Privacy policy](https://www.finra.org/privacy-policy)
+- [GitHub](https://github.com/FINRAOS)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 34.1** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 42.9 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 50.0 |
+| Access clarity | 28.9 |
+
+**Agent readiness 17.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 24.1** — Securities & Market Data
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/finra/](https://apis.io/providers/finra/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for FINRA: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/finra/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
